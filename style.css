@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Outfit:wght@400;700&display=swap');
+
+/* Main App Container */
+.stApp {
+    background-color: #0d1117;
+    /* Darker, slightly blue-tinted black */
+    font-family: 'Inter', sans-serif;
+}
+
+/* Chat Message Styling */
+.stChatMessage {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 12px;
+    transition: transform 0.2s ease;
+}
+
+.stChatMessage:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Assistant Bubble Specifics */
+[data-testid="stChatMessageAvatarAssistant"]+div {
+    border-left: 3px solid #00d4ff;
+    /* Techy blue accent */
+}
+
+/* User Bubble Specifics */
+[data-testid="stChatMessageAvatarUser"]+div {
+    background: rgba(0, 212, 255, 0.1);
+    border-left: 3px solid #ff007a;
+    /* Neon pink for user */
+}
+
+/* Sidebar Customization */
+[data-testid="stSidebar"] {
+    background: rgba(13, 17, 23, 0.95);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+}
+
+/* Gradient Heading */
+.main-title {
+    background: linear-gradient(90deg, #00d4ff, #ff007a);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Input Bar */
+.stChatInputContainer {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Progress Bar Color */
+.stProgress>div>div>div>div {
+    background-image: linear-gradient(to right, #00d4ff, #ff007a);
+}
